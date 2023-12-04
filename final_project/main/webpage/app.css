@@ -1,0 +1,84 @@
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.titulo-principal h2 {
+    margin: 0;
+}
+
+.disponibilidad-parqueo,
+.mapa-localizacion {
+    margin-top: 20px;
+}
+
+.a-section,
+.b-section {
+    display: flex;
+}
+
+.a-section > div,
+.b-section > div {
+    flex: 1;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.boton-bloqueo {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton-bloqueo button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.estado-disponible {
+    display: inline-block;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+}
+
+.estado-disponible.disponible {
+    background-color: green;
+}
+
+.estado-disponible.no-disponible {
+    background-color: red;
+}
+
+.informacion-parking table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.informacion-parking th,
+.informacion-parking td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.informacion-parking th {
+    background-color: #f2f2f2;
+}

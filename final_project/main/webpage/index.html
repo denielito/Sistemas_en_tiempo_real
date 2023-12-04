@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parking monitoring</title>
+  <script src='jquery-3.3.1.min.js'></script>
+  <link rel="stylesheet" href="app.css">
+  <script async src="app.js"></script>
+</head>
+
+<body>
+  <div class="titulo-principal">
+    <h2>PARKING</h2>
+  </div>
+  <div id="temperatura-container">
+    Temperatura: <span id="temperatura-valor">---</span> °C
+  </div>
+  <div class="estado-disponible disponible">DISPONIBLE</div>
+  <div class="mapa-localizacion">
+    <h3>Lugar vacio disponible</h3>
+    <div class="lotes-lugar">
+      <div class="a-section">
+        <div class="a1">A1</div>
+        <div class="a2">A2</div>
+        <div class="a3">A3</div>
+        <div class="a4">A4</div>
+      </div>
+      <div class="b-section">
+        <div class="b1">B1</div>
+        <div class="b2">B2</div>
+        <div class="b3">B3</div>
+        <div class="b4">B4</div>
+      </div>
+    </div>
+  </div>
+  <div class="boton-bloqueo">
+    <button onclick="bloquearSistema()">BLOQUEAR SISTEMA</button>
+  </div>
+  <!-- Ventana Modal -->
+  <div class="modal fade" id="modalMensaje" tabindex="-1" role="dialog" aria-labelledby="modalMensajeLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalMensajeLabel">Mensaje del Sistema</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del mensaje -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="informacion-parking">
+    <table>
+      <thead>
+        <tr>
+          <th>LOTE</th>
+          <th>DISPONIBILIDAD</th>
+          <th>TIEMPO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Fila 1 -->
+        <tr>
+          <td>A1</td>
+          <td class="celda-a1">Fila 1, Columna 2</td>
+          <td class="tiempo-a1">Fila 1, Columna 3</td>
+        </tr>
+        <!-- Fila 2 -->
+        <tr>
+          <td>A2</td>
+          <td>DISPONIBLE</td>
+          <td>---</td>
+        </tr>
+        <!-- Fila 3 -->
+        <tr>
+          <td>A3</td>
+          <td class="celda-a3"">Fila 3, Columna 2</td>
+          <td class=" tiempo-a3">Fila 3, Columna 3</td>
+        </tr>
+        <!-- Fila 4 -->
+        <tr>
+          <td>A4</td>
+          <td>DISPONIBLE</td>
+          <td>---</td>
+        </tr>
+        <!-- Fila 5 -->
+        <tr>
+          <td>B1</td>
+          <td>DISPONIBLE</td>
+          <td>---</td>
+        </tr>
+        <!-- Fila 6 -->
+        <tr>
+          <td>B2</td>
+          <td class="celda-b2">Fila 6, Columna 2</td>
+          <td class="tiempo-b2">Fila 6, Columna 3</td>
+        </tr>
+        <!-- Fila 7 -->
+        <tr>
+          <td>B3</td>
+          <td>DISPONIBLE</td>
+          <td>---</td>
+        </tr>
+        <!-- Fila 8 -->
+        <tr>
+          <td>B4</td>
+          <td class="celda-b4">Fila 8, Columna 2</td>
+          <td class="tiempo-b4">Fila 8, Columna 3</td>
+        </tr>
+  </div>
+</body>
+
+</html>
